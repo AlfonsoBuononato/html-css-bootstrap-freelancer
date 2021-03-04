@@ -29,6 +29,22 @@
     text-align: center;
 }
 
+.text-align-l{
+    text-align: left;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.m-b{
+    margin-bottom: 20px;
+}
+
+.p-0{
+    padding: 0;
+}
+
 .p-top{
     padding-top: 30px;
 }
@@ -42,6 +58,7 @@
 }
 
 img{
+    width: 100%;
     max-width: 200px;
     max-height: 220px;
 }
@@ -54,19 +71,62 @@ h2{
     color: white;
 }
 
-div > hr{
-    color: black;
-    border: 10px solid black;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    height: 10px;
-    line-height: 1;
+h5{
+    font-size: 9px;
 }
 
-.height{
-    height: 10px;
-    line-height: 10px;
+
+.btn-default{
+    background-color: #1abc9c;
+    color: white;
+    border-color: white;
+}
+
+i{
+    font-size: 15px;
+    padding-right: 5px;
+}
+
+.colore-verde{
+    color: #1abc9c;
+}
+
+/* GENERAL SIZE */
+
+div > hr{
+    width: 25%;
+    max-width: 70px;
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+div > hr.border-black{
+    border: 2px solid black;
+}
+
+div .fas.black,
+div h2.black{
+    color: black;
+}
+
+i.fab{
+    max-width: 100%;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    color: white;
+    border: 1px solid white;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul{
+    padding: 0px;
+}
+
+li{
+    display: inline-block;
 }
 
 /* SEZIONE MOBILE 0px - 768px */
@@ -87,21 +147,45 @@ div > hr{
     /* MAIN */
     /* SECTION HERO */
     section.hero{
-        background-color: aquamarine;
+        background-color: #1abc9c;
         text-align: center;
     }
 
     /* SECTION PORTFOLIO */
     section.portfolio{
-        /* text-align: center; */
+        text-align: center;
+    }
+
+    section.portfolio img{
+        width: 100%;
+        max-width: 500px;
+        max-height: 520px;
     }
     
     /* SECTION ABOUT */
     section.about{
-        height: 350px;
-        background: aquamarine;
+        background: #1abc9c;
+        text-align: center;
     }
 
+    /* SECTION CONTATTI */
+    .form-group label{
+        margin: 0;
+    }
+    .form-control{
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid black;
+        box-shadow: none;
+        border-radius: 0px;
+        padding: 0;
+    }
+
+    button{
+        margin-left: 15px;
+    }
+    
     /* SECTION LOCATION */
     section.location{
         background-color: #3a546d;
