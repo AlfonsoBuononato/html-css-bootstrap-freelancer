@@ -1,21 +1,4 @@
 /* UTILITIES */
-.box{
-    background-color: red;
-    height: 100px;
-    line-height: 100px;
-}
-
-.box2{
-    max-width: 100%;
-    height: 70px;
-    background-color: red;
-}
-
-.box3{
-    max-width: 100%;
-    height: 30px;
-    background-color: red;
-}
 
 .inline-block{
     display: inline-block;
@@ -91,7 +74,7 @@ i{
     color: #1abc9c;
 }
 
-/* GENERAL SIZE */
+/* GENERAL */
 
 div > hr{
     width: 25%;
@@ -99,6 +82,7 @@ div > hr{
     border: 2px solid white;
     display: inline-block;
     border-radius: 2px;
+    vertical-align: middle;
 }
 
 div > hr.border-black{
@@ -129,11 +113,33 @@ li{
     display: inline-block;
 }
 
+/* HOVER */
+
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
 /* SEZIONE MOBILE 0px - 768px */
 
 @media screen and (min-width:0px) {
 
     /* HEADER */
+    header{
+        height: 80px;
+    }
+    header .navbar{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        border: none;
+        border-radius: 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        z-index: 1;
+    }
+
     header .navbar-default{
         background-color: #2c3e50;
         margin-bottom: 0;
@@ -142,6 +148,14 @@ li{
     header .navbar-default .navbar-brand{
         color: white;
         font-size: 14px;
+    }
+
+    header .navbar-default .navbar-nav > li a{
+        color: white;
+    }
+
+    header .navbar-default .navbar-nav > li > a:hover{
+        color: gray;
     }
 
     /* MAIN */
@@ -204,6 +218,35 @@ li{
         margin-left: 0;
     }
 
+    /* SECTION PORTFOLIO */
+
+    /* SECTION PORTFOLIO OVERLAY */
+    section.portfolio .overlay{
+        display: none;
+        position: absolute;
+        background-color: rgba(153, 153, 153, 0.7);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 15px 15px 0 15px;
+        z-index: 1;
+    }
+
+    section.portfolio .overlay i{
+        position: absolute;
+        font-size: 50px;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    /* HOVER OVERLAY */
+    
+    section.portfolio .col-xs-12:hover .overlay{
+        display: block;
+        cursor: pointer;
+    }
     /* SECTION LOCATION */
     section.location .row .padding{
         padding: 0;
