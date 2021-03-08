@@ -250,7 +250,15 @@ a:hover{
     section.portfolio .col-xs-12:hover .overlay{
         display: block;
         cursor: pointer;
+        animation-name: overlay;
+        animation-duration: 1.5s;
     }
+
+    @keyframes overlay {
+        0%   {top: 100%;}
+        100% {bottom: 0;}
+    }
+
     /* SECTION LOCATION */
     section.location .row .padding{
         padding: 0;
